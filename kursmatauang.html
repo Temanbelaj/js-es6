@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs mata uang</title>
+    <script>
+        
+        function konversi() {
+	        var input = (document.form.nilai.value);
+	        var hitunguang = (document.form.user_input.value);
+	        var hasil = 0;
+    	    if(hitunguang == "USD"){
+	    	    hasil = input*13500;
+	        }
+	        else if(hitunguang == "SGD"){
+		        hasil = input*9900;
+	        }
+	        else if(hitunguang == "YEN"){
+		    hasil = input*126;
+            }
+            else if(hitunguang == "EURO"){
+                hasil = input*15900;
+            }
+            else if(hitunguang == "RIYAL"){
+                hasil = input*2000;
+            }
+            else if(hitunguang == "RINGGIT"){
+                hasil = input*3300;
+            }
+            else{
+            hasil = 0;
+            }
+        
+            document.form.hasil.value= eval(hasil);
+        } 
+    </script> 
+</head>
+<body>
+    
+    <form name="form">
+        <label for="nilai">Masukkan nilai Rupiah</label>
+        <input type="number" name="nilai">
+        <select name="user_input" id="user_input">
+            <option id="pilih_1" value="USD">USD</option>
+            <option id="pilih_2" value="SGD">SGD</option>
+            <option id="pilih_3" value="RINGGIT">RINGGIT</option>
+            <option id="pilih_4" value="YEN">YEN</option>
+            <option id="pilih_5" value="EURO">EURO</option>
+            <option id="pilih_6" value="RIYAL">RIYAL</option>
+        </select>
+        <button onclick="konversi(); return false;">konversi</button> 
+        <input type="text" name="hasil" disabled>
+    </form>
+</body>
+</html>

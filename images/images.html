@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function pilih(){
+            let list_senapan = document.getElementById("senapan");
+            let idx = list_senapan.selectedIndex;
+            console.log("senapan utama ke- " + idx + " adalah " + list_senapan[idx].value);
+            let area = document.getElementById("gambar");
+            area.src = "gambar/"+list_senapan[idx].value+".jpg";
+            if (list_senapan = "g36c"){
+                
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: cadetblue;
+        }
+        img {
+            width: 1000px;
+            height: 20%;
+            border: 1ch aqua solid;
+            margin-left: 40ch;
+        }
+        h1 {
+            color: rgb(6, 36, 211);
+            text-align: center;
+            font-size: 10ch;
+        }
+
+    </style>
+
+   
+</head>
+<body>
+    <form id="frm" >
+        <select  id="senapan" onchange="pilih()">
+            <option value="g36c">G36c</option>
+            <option value="hk416">HK416</option>
+            <option value="m82">M82</option>
+            <option value="mg4">MG4</option>
+            <option value="mpx">MPX</option>
+        </select>
+    </form>
+    <br>
+    <h1>Pilih Senjatamu</h1>
+    <img src="gambar/g36c.jpg" alt="senapan g36c" id="gambar">
+</body>
+</html>

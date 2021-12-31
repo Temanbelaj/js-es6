@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        div {
+            width: 500px;
+            height: 500px;
+            border: 1ch blue solid;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function send() {
+            var isi = document.getElementById("input").value;
+
+            document.getElementById("kotak").innerHTML += '<div>' +isi+ '</div>';
+            document.getElementById("input").value="";
+
+        }
+    </script>
+    
+    
+    
+
+    <title>Website chat</title>
+</head>
+<body>
+   <div id="kotak">
+    
+   </div>
+   <textarea name="pesan" id="input" cols="40" rows="5"></textarea>
+   <button onclick="send()">kirim</button>
+</body>
+</html>
